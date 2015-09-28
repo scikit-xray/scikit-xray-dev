@@ -1,1 +1,5 @@
-[]
+channels:
+    sources:
+        - scikit-xray-dev
+    target:
+        - scikit-xray-dev

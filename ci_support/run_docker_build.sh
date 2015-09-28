@@ -5,7 +5,7 @@
 FEEDSTOCK_ROOT=$(cd "$(dirname "$0")/.."; pwd;)
 RECIPE_ROOT=$FEEDSTOCK_ROOT/recipe
 
-UPLOAD_OWNER="[]"
+UPLOAD_OWNER="['scikit-xray-dev']"
 UPLOAD_CHANNEL="main"
 
 docker info
@@ -13,6 +13,8 @@ docker info
 config=$(cat <<CONDARC
 
 channels:
+
+ - scikit-xray-dev
 
  - defaults # As we need conda-build
 
