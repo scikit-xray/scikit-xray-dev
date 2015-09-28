@@ -1,24 +1,53 @@
+# This file was generated automatically by conda-forge (vn 0.1.0).
+
+
+
+
 language: objective-c
+
+
+
 env:
-  global:
-  - secure: URf7fLqmsGi80F3jKbvULvv7hmuf+0OTB6LTKm9FMB6p3OGdD9jfflUvLDJqTU8putBhRaUEcjBJxhqYCoKLi47pK4M4ALUwoZWr+CgJ8ZRJMeZjCI70xIbIxwC55Lx4+9npTiSBzMgH7dWTnMfKUKzSs6xXuRvQNouCTPAWKn07oB2LAa9MDibkqQg87iT827FqAmctS8Sh/vjW6dWenpe/iL5D20NnVT6Clfu/XgvcvHmKKTLFxMzvwQD3aWLu/ubCZwxCUG5j7fkj9P56NKImkRoPC0Yy5QBtM4iPIJi+HjsyMaWQr32h/BZINtmYRyuQFeVg/0CLs2mWvgK1ET3vevrHBZz5N9LCubrty8Jf5GLIMRLIqy/3suNDlCc/yx5vblnC5nK9C1OerJ0wWM3JzQO9em5ckdeOGQ6sp9s5y+qzvbJmZVoUOTB/ZcZ/pHyCk7D0CYFPJAcGR1R29ChrynDGLgB6InBSHATKHnrntI/p8uVSTo6SKIYuhCITi1adZtfTfiHfHwjKu0pe4MntGWHgPoJDBDPYimR4G+BBog0e6NW+5fAAGr776fO62oag9g/8vA0EJfxRViq3Mzu9iGZMexi2s9pwqCF3n/MZwBpr0c6H2iqqQ/BJObXJQskNIELub4QVjf20eHbWyXKmoRezwQuIc81w1SIHcKg=
+
+
   matrix:
-  - CONDA_NPY=1.9 CONDA_PY=2.7
-  - CONDA_NPY=1.9 CONDA_PY=3.4
+    
+    -CONDA_NPY=1.9  CONDA_PY=2.7  
+    
+    -CONDA_NPY=1.9  CONDA_PY=3.4  
+    
+
+
+
+  global:
+
+    # The binstar_token secure variable. This is defined canonically in forge.yml.
+    - secure: "URf7fLqmsGi80F3jKbvULvv7hmuf+0OTB6LTKm9FMB6p3OGdD9jfflUvLDJqTU8putBhRaUEcjBJxhqYCoKLi47pK4M4ALUwoZWr+CgJ8ZRJMeZjCI70xIbIxwC55Lx4+9npTiSBzMgH7dWTnMfKUKzSs6xXuRvQNouCTPAWKn07oB2LAa9MDibkqQg87iT827FqAmctS8Sh/vjW6dWenpe/iL5D20NnVT6Clfu/XgvcvHmKKTLFxMzvwQD3aWLu/ubCZwxCUG5j7fkj9P56NKImkRoPC0Yy5QBtM4iPIJi+HjsyMaWQr32h/BZINtmYRyuQFeVg/0CLs2mWvgK1ET3vevrHBZz5N9LCubrty8Jf5GLIMRLIqy/3suNDlCc/yx5vblnC5nK9C1OerJ0wWM3JzQO9em5ckdeOGQ6sp9s5y+qzvbJmZVoUOTB/ZcZ/pHyCk7D0CYFPJAcGR1R29ChrynDGLgB6InBSHATKHnrntI/p8uVSTo6SKIYuhCITi1adZtfTfiHfHwjKu0pe4MntGWHgPoJDBDPYimR4G+BBog0e6NW+5fAAGr776fO62oag9g/8vA0EJfxRViq3Mzu9iGZMexi2s9pwqCF3n/MZwBpr0c6H2iqqQ/BJObXJQskNIELub4QVjf20eHbWyXKmoRezwQuIc81w1SIHcKg="
+
+
+
+
+
 install:
-- |
-  MINICONDA_URL="http://repo.continuum.io/miniconda"
-  MINICONDA_FILE="Miniconda3-3.7.3-MacOSX-x86_64.sh"
-  wget "${MINICONDA_URL}/${MINICONDA_FILE}"
-  bash $MINICONDA_FILE -b
+    - |
+      MINICONDA_URL="http://repo.continuum.io/miniconda"
+      MINICONDA_FILE="Miniconda3-3.7.3-MacOSX-x86_64.sh"
+      wget "${MINICONDA_URL}/${MINICONDA_FILE}"
+      bash $MINICONDA_FILE -b
 
-  export PATH=/Users/travis/miniconda3/bin:$PATH
+      export PATH=/Users/travis/miniconda3/bin:$PATH
 
-  conda update --yes conda
-  conda install --yes conda-build jinja2 anaconda-client
-  conda config --add channels scikit-xray-dev
-  conda config --add channels scikit-xray
+      conda update --yes conda
+      conda install --yes conda-build jinja2 anaconda-client
+
+      
+      conda config --add channels scikit-xray-dev
+      
+      conda config --add channels scikit-xray
+      
+
 script:
-- conda build ./recipe
+  - conda build ./recipe
+
 after_success:
-- "./ci_support/upload_or_check_non_existence.py ./recipe scikit-xray-dev --channel=main"
+  - ./ci_support/upload_or_check_non_existence.py ./recipe scikit-xray-dev --channel=main
