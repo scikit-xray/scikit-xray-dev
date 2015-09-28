@@ -46,15 +46,15 @@ conda info
 # Embarking on 2 case(s).
 
     set -x
-    export CONDA_NPY=1.9
     export CONDA_PY=2.7
+    export CONDA_NPY=1.9
     set +x
     conda build --no-test /recipe_root || exit 1
     
 
     set -x
-    export CONDA_NPY=1.9
     export CONDA_PY=3.4
+    export CONDA_NPY=1.9
     set +x
     conda build --no-test /recipe_root || exit 1
     
@@ -76,13 +76,13 @@ echo "$config" > ~/.condarc
 conda info
 
 
-    export CONDA_NPY=1.9
     export CONDA_PY=2.7
+    export CONDA_NPY=1.9
     
     conda build --test /recipe_root || exit 1
     /feedstock_root/ci_support/upload_or_check_non_existence.py /recipe_root $UPLOAD_OWNER --channel=$UPLOAD_CHANNEL || exit 1
-    export CONDA_NPY=1.9
     export CONDA_PY=3.4
+    export CONDA_NPY=1.9
     
     conda build --test /recipe_root || exit 1
     /feedstock_root/ci_support/upload_or_check_non_existence.py /recipe_root $UPLOAD_OWNER --channel=$UPLOAD_CHANNEL || exit 1
