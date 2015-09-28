@@ -16,8 +16,6 @@ env:
     -CONDA_NPY=1.9  CONDA_PY=3.4  
     
 
-
-
 install:
     - |
       MINICONDA_URL="http://repo.continuum.io/miniconda"
