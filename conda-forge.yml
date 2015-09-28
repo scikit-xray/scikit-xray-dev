@@ -1,6 +1,7 @@
 channels:
   sources:
     - scikit-xray-dev
+    - scikit-xray
   target: scikit-xray-dev
 docker:
   image: pelson/obvious-ci:latest_x64
