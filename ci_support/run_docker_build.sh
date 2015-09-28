@@ -5,7 +5,7 @@
 FEEDSTOCK_ROOT=$(cd "$(dirname "$0")/.."; pwd;)
 RECIPE_ROOT=$FEEDSTOCK_ROOT/recipe
 
-UPLOAD_OWNER="['scikit-xray-dev']"
+UPLOAD_OWNER="scikit-xray-dev"
 UPLOAD_CHANNEL="main"
 
 docker info
@@ -30,7 +30,7 @@ cat << EOF | docker run -i \
                         -v ${RECIPE_ROOT}:/recipe_root \
                         -v ${FEEDSTOCK_ROOT}:/feedstock_root \
                         -a stdin -a stdout -a stderr \
-                        ['docker/pelson:latest_x64'] \
+                         \
                          || exit $?
 
 export PYTHONUNBUFFERED=1
@@ -51,7 +51,7 @@ cat << EOF | docker run -i \
                         -v ${RECIPE_ROOT}:/recipe_root \
                         -v ${FEEDSTOCK_ROOT}:/feedstock_root \
                         -a stdin -a stdout -a stderr \
-                        ['docker/pelson:latest_x64'] \
+                         \
                          || exit $?
 
 export BINSTAR_TOKEN=${BINSTAR_TOKEN}
