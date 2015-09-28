@@ -1,5 +1,8 @@
 channels:
-    sources:
-        - scikit-xray-dev
-    target:
-        - scikit-xray-dev
+  sources:
+    - scikit-xray-dev
+  target:
+    - scikit-xray-dev
+docker:
+  image:
+    - docker/pelson:latest_x64

@@ -30,8 +30,8 @@ cat << EOF | docker run -i \
                         -v ${RECIPE_ROOT}:/recipe_root \
                         -v ${FEEDSTOCK_ROOT}:/feedstock_root \
                         -a stdin -a stdout -a stderr \
-                        pelson/conda64_obvious_ci \
-                        bash || exit $?
+                        ['docker/pelson:latest_x64'] \
+                         || exit $?
 
 export PYTHONUNBUFFERED=1
 echo "$config" > ~/.condarc
@@ -51,8 +51,8 @@ cat << EOF | docker run -i \
                         -v ${RECIPE_ROOT}:/recipe_root \
                         -v ${FEEDSTOCK_ROOT}:/feedstock_root \
                         -a stdin -a stdout -a stderr \
-                        pelson/conda64_obvious_ci \
-                        bash || exit $?
+                        ['docker/pelson:latest_x64'] \
+                         || exit $?
 
 export BINSTAR_TOKEN=${BINSTAR_TOKEN}
 export PYTHONUNBUFFERED=1
