@@ -12,9 +12,9 @@ env:
 
   matrix:
     
-    -CONDA_NPY=1.9  CONDA_PY=2.7  
+    -CONDA_PY=2.7  CONDA_NPY=1.9  
     
-    -CONDA_NPY=1.9  CONDA_PY=3.4  
+    -CONDA_PY=3.4  CONDA_NPY=1.9  
     
 
 
@@ -50,4 +50,5 @@ script:
   - conda build ./recipe
 
 after_success:
+  - conda install anaconda-client --yes
   - ./ci_support/upload_or_check_non_existence.py ./recipe scikit-xray-dev --channel=main
