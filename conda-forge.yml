@@ -3,5 +3,5 @@ channels:
     - scikit-xray-dev
   target: scikit-xray-dev
 docker:
-  imaage:
-    - docker/pelson:latest_x64
+  image: docker/pelson:latest_x64
+
