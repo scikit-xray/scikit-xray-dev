@@ -6,3 +6,8 @@ docker:
   image: docker/pelson:latest_x64
 templates:
   run_docker_build: run_docker_build_matrix.tmpl
+matrix:
+  python:
+    - 2.7
+    - 3.4
+  numpy: 1.9
