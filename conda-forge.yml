@@ -4,4 +4,5 @@ channels:
   target: scikit-xray-dev
 docker:
   image: docker/pelson:latest_x64
-
+templates:
+  run_docker_build: run_docker_build_matrix.tmpl
