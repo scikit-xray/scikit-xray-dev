@@ -9,20 +9,17 @@ language: objective-c
 
 env:
 
-
-  matrix:
-    
-    -CONDA_NPY=1.9  CONDA_PY=2.7  
-    
-    -CONDA_NPY=1.9  CONDA_PY=3.4  
-    
-
-
-
   global:
 
     # The binstar_token secure variable. This is defined canonically in forge.yml.
     - secure: "URf7fLqmsGi80F3jKbvULvv7hmuf+0OTB6LTKm9FMB6p3OGdD9jfflUvLDJqTU8putBhRaUEcjBJxhqYCoKLi47pK4M4ALUwoZWr+CgJ8ZRJMeZjCI70xIbIxwC55Lx4+9npTiSBzMgH7dWTnMfKUKzSs6xXuRvQNouCTPAWKn07oB2LAa9MDibkqQg87iT827FqAmctS8Sh/vjW6dWenpe/iL5D20NnVT6Clfu/XgvcvHmKKTLFxMzvwQD3aWLu/ubCZwxCUG5j7fkj9P56NKImkRoPC0Yy5QBtM4iPIJi+HjsyMaWQr32h/BZINtmYRyuQFeVg/0CLs2mWvgK1ET3vevrHBZz5N9LCubrty8Jf5GLIMRLIqy/3suNDlCc/yx5vblnC5nK9C1OerJ0wWM3JzQO9em5ckdeOGQ6sp9s5y+qzvbJmZVoUOTB/ZcZ/pHyCk7D0CYFPJAcGR1R29ChrynDGLgB6InBSHATKHnrntI/p8uVSTo6SKIYuhCITi1adZtfTfiHfHwjKu0pe4MntGWHgPoJDBDPYimR4G+BBog0e6NW+5fAAGr776fO62oag9g/8vA0EJfxRViq3Mzu9iGZMexi2s9pwqCF3n/MZwBpr0c6H2iqqQ/BJObXJQskNIELub4QVjf20eHbWyXKmoRezwQuIc81w1SIHcKg="
+
+  matrix:
+
+    -CONDA_NPY=1.9  CONDA_PY=2.7
+
+    -CONDA_NPY=1.9  CONDA_PY=3.4
+
 
 
 
