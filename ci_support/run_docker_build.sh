@@ -14,9 +14,9 @@ config=$(cat <<CONDARC
 
 channels:
 
- - scikit-xray-dev
-
  - scikit-xray
+
+ - scikit-xray-dev
 
  - defaults # As we need conda-build
 
