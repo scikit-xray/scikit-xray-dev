@@ -16,23 +16,23 @@ environment:
   CONDA_PY: "27"
 
   BINSTAR_TOKEN:
-    # Generated with "binstar auth --create --name appveyor -o conda-forge" and encrypted on ci.appveyor.com/tools/encrypt. 
+    # Generated with "binstar auth --create --name appveyor -o conda-forge" and encrypted on ci.appveyor.com/tools/encrypt.
     secure: wtylLGtp/ID3G3DFT2uxuLFXuijFqmxI6phj60izpNC3pxd585bR6k2oonf5iGGb
 
   matrix:
     - TARGET_ARCH: x86
-      CONDA_PY: 2.7
       CONDA_NPY: 1.9
+      CONDA_PY: 2.7
     - TARGET_ARCH: x64
-      CONDA_PY: 2.7
       CONDA_NPY: 1.9
+      CONDA_PY: 2.7
 
     - TARGET_ARCH: x86
-      CONDA_PY: 3.4
       CONDA_NPY: 1.9
+      CONDA_PY: 3.4
     - TARGET_ARCH: x64
-      CONDA_PY: 3.4
       CONDA_NPY: 1.9
+      CONDA_PY: 3.4
 
 
 # We always use a 64-bit machine, but can build x86 distributions
